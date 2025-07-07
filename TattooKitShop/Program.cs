@@ -4,15 +4,12 @@ using TattooKitShop.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddApplicationDbContext(builder.Configuration);
+builder.Services.AddApplicationIndentity(builder.Configuration);
 
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(connectionString));
-builder.Services.AddDatabaseDeveloperPageExceptionFilter();
-
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-    .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddApplicationService();
 
 var app = builder.Build();
 

@@ -1,19 +1,31 @@
-﻿namespace Microsoft.Extensions.DependencyInjection
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using TattooKitShop.Data;
+
+namespace Microsoft.Extensions.DependencyInjection
 {
     public static class ServiceCollectionExtension
     {
-        public static IServiceCollection AddApplicationService(this IServiceCollection service)
+        public static IServiceCollection AddApplicationService(this IServiceCollection services)
         {
 
-            return service;
+            return services;
         }
-        public static IServiceCollection AddApplicationDbContext(this IServiceCollection service, IConfiguration config)
+        public static IServiceCollection AddApplicationDbContext(this IServiceCollection services, IConfiguration config)
         {
-            return service;
+            var connectionString = config.GetConnectionString("DefaultConnection");
+            services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlServer(connectionString));
+
+            services.AddDatabaseDeveloperPageExceptionFilter();
+
+            return services;
         }
-        public static IServiceCollection AddApplicationIndentity(this IServiceCollection service, IConfiguration config)
+        public static IServiceCollection AddApplicationIndentity(this IServiceCollection services, IConfiguration config)
         {
-            return service;
+            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                    .AddEntityFrameworkStores<ApplicationDbContext>();
+            return services;
         }
     }
 }
