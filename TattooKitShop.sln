@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TattooKitShop", "TattooKitShop\TattooKitShop.csproj", "{4F2EE977-7911-476E-8E34-FF59BE4CBFA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TattooKitShop", "TattooKitShop\TattooKitShop.csproj", "{4F2EE977-7911-476E-8E34-FF59BE4CBFA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TattooKitShop.Core", "TattooKitShop.Core\TattooKitShop.Core.csproj", "{9C1F61B2-9730-463A-9DF8-DACDC3461E2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TattooKitShop.Infrastructure", "TattooKitShop.Infrastructure\TattooKitShop.Infrastructure.csproj", "{0CB03F11-12A7-41B5-8FD2-767BD707A73A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{4F2EE977-7911-476E-8E34-FF59BE4CBFA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F2EE977-7911-476E-8E34-FF59BE4CBFA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F2EE977-7911-476E-8E34-FF59BE4CBFA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C1F61B2-9730-463A-9DF8-DACDC3461E2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C1F61B2-9730-463A-9DF8-DACDC3461E2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C1F61B2-9730-463A-9DF8-DACDC3461E2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C1F61B2-9730-463A-9DF8-DACDC3461E2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CB03F11-12A7-41B5-8FD2-767BD707A73A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CB03F11-12A7-41B5-8FD2-767BD707A73A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CB03F11-12A7-41B5-8FD2-767BD707A73A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CB03F11-12A7-41B5-8FD2-767BD707A73A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
