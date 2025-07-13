@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using TattooKitShop.Data;
+using TattooKitShop.Infrastructure.Data;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
