@@ -39,13 +39,6 @@ namespace TattooKitShop.Infrastructure.Data.Models
         [Url]
         public string ImageUrl { get; set; } = null!;
 
-
-        [Comment("The amount of like a product holds")]
-        public int Likes { get; set; } = 0;
-
-        [Comment("The amount of dislikes a product holds")]
-        public int Dislikes { get; set; } = 0;
-
         [Comment("Foreign key from Category")]
         public int CategoryId { get; set; }
         [ForeignKey(nameof(CategoryId))]

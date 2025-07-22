@@ -14,7 +14,11 @@ namespace TattooKitShop.Infrastructure.Data.Models
         public int Id { get; set; }
 
         [Required]
+        [StringLength(DataConstants.Category.NameMaxLength)]
         public string Name { get; set; } = null!;
+
+
+        public ICollection<Product> Products { get; set; } = new List<Product>();
 
     }
 }
