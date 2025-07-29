@@ -26,11 +26,6 @@ namespace TattooKitShop.Infrastructure.Data.Models
         public string Description { get; set; } = null!;
 
         [Required]
-        [StringLength(DataConstants.Product.BrandMaxLength)]
-        [Comment("The brand name")]
-        public string Brand { get; set; } = null!;
-
-        [Required]
         [Column(TypeName = "decimal(18,2)")]
         [Comment("The price of the product")]
         public decimal Price { get; set; }
@@ -43,5 +38,11 @@ namespace TattooKitShop.Infrastructure.Data.Models
         public int CategoryId { get; set; }
         [ForeignKey(nameof(CategoryId))]
         public Category? Category { get; set; }
+
+
+        [Comment("Foreign key from Brand")]
+        public int BrandId { get; set; }
+        [ForeignKey(nameof(BrandId))]
+        public Brand? Brand { get; set; }
     }
 }

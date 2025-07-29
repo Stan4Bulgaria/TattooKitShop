@@ -60,6 +60,12 @@ namespace TattooKitShop.Infrastructure.Data
 
             public const string ExpireDateFormat = "MM/yy";
         }
+        public static class Brand 
+        {
+            public const int NameMaxLength = 30;
+            public const int NameMinLength = 1;
+        }
+
         public enum OrderStatus
         {
             Pending = 0,

@@ -11,7 +11,7 @@ using TattooKitShop.Infrastructure.Data;
 
 namespace TattooKitShop.Infrastructure.Migrations
 {
-    [DbContext(typeof(ApplicationDbContext))]
+    [DbContext(typeof(TattoKitDbContext))]
     [Migration("20250722205038_DomainTables")]
     partial class DomainTables
     {

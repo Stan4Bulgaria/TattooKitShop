@@ -10,7 +10,7 @@ using TattooKitShop.Infrastructure.Data;
 
 namespace TattooKitShop.Infrastructure.Migrations
 {
-    [DbContext(typeof(ApplicationDbContext))]
+    [DbContext(typeof(TattoKitDbContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

@@ -4,14 +4,15 @@ using TattooKitShop.Infrastructure.Data.Models;
 
 namespace TattooKitShop.Infrastructure.Data
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class TattoKitDbContext : IdentityDbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+        public TattoKitDbContext(DbContextOptions<TattoKitDbContext> options)
             : base(options)
         {
 
         }
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+        public DbSet<Brand> Brands { get; set; }
 
         public DbSet<Category> Categorys { get; set; }
 

@@ -14,7 +14,7 @@ namespace Microsoft.Extensions.DependencyInjection
         public static IServiceCollection AddApplicationDbContext(this IServiceCollection services, IConfiguration config)
         {
             var connectionString = config.GetConnectionString("DefaultConnection");
-            services.AddDbContext<ApplicationDbContext>(options =>
+            services.AddDbContext<TattoKitDbContext>(options =>
                 options.UseSqlServer(connectionString));
 
             services.AddDatabaseDeveloperPageExceptionFilter();
@@ -24,7 +24,7 @@ namespace Microsoft.Extensions.DependencyInjection
         public static IServiceCollection AddApplicationIndentity(this IServiceCollection services, IConfiguration config)
         {
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                    .AddEntityFrameworkStores<ApplicationDbContext>();
+                    .AddEntityFrameworkStores<TattoKitDbContext>();
             return services;
         }
     }
